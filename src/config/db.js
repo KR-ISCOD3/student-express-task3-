@@ -7,12 +7,10 @@ const url = process.env.MONGO_URL;
 
 const connection = async () => {
   try {
-    mongoose
+    await mongoose
       .connect(url, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 30000,
-      })
+        useUnifiedTopology: true, })
       .then(() => console.log("Connected"))
       .catch((err) => console.error(err));
   } catch (e) {
