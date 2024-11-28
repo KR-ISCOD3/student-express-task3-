@@ -1,15 +1,15 @@
 const express = require('express');
 const {config} = require("dotenv");
 const cors = require('cors');
-const connection = require('./config/db');
+const connectiondb = require('./config/db');
 const router = require('./routes/studentroute');
 config()
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5004;
 const host = process.env.HOST || "localhost";
 
-connection()
+connectiondb()
 
 app.use(express.json())
 app.use(cors());

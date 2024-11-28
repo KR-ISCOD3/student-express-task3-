@@ -5,12 +5,13 @@ config();
 
 const url = process.env.MONGO_URL;
 
-const connection = async () => {
+const connectiondb = async () => {
   try {
     await mongoose
       .connect(url, {
         useNewUrlParser: true,
-        useUnifiedTopology: true, })
+        useUnifiedTopology: true,
+      })
       .then(() => console.log("Connected"))
       .catch((err) => console.error(err));
   } catch (e) {
@@ -18,4 +19,4 @@ const connection = async () => {
   }
 };
 
-module.exports = connection;
+module.exports = connectiondb;
