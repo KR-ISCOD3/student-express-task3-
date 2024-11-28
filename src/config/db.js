@@ -3,12 +3,10 @@ const mongoose = require("mongoose");
 
 config();
 
-const url = process.env.MONGO_URL;
-
 const connectiondb = async () => {
   try {
     await mongoose
-      .connect(url, {
+      .connect("mongodb+srv://raksmey:auth123@cluster0.ekqum.mongodb.net/student-db", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
