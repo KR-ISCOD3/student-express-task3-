@@ -6,7 +6,7 @@ const router = require('./routes/studentroute');
 config()
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3003;
 const host = process.env.HOST || "localhost";
 
 connection()
