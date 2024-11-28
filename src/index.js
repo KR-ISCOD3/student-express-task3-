@@ -1,5 +1,6 @@
 const express = require('express');
 const {config} = require("dotenv");
+const cors = require('cors');
 const connection = require('./config/db');
 const router = require('./routes/studentroute');
 config()
@@ -11,6 +12,7 @@ const host = process.env.HOST || "localhost";
 connection()
 
 app.use(express.json())
+app.use(cors());
 app.use('/api',router)
 
 app.listen(port,()=>{
