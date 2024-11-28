@@ -1,13 +1,13 @@
 #ROUTE
 
 -get
- http://127.0.0.1:3001/api
+https://student-express-task3.onrender.com/api
 
 -posts
- http://127.0.0.1:3001/api/post
+https://student-express-task3.onrender.com/api/post
 
 -put
- http://127.0.0.1:3001/api/put/<data_id>
+https://student-express-task3.onrender.com/api/put/<data_id>
 
 -delete
- http://127.0.0.1:3001/api/delete/<data_id>
+https://student-express-task3.onrender.com/api/delete/<data_id>
